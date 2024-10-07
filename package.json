@@ -4,7 +4,7 @@
 	"version": "0.0.0",
 	"description": "A 3D demo scene with a video playing on the TV",
 	"keywords": [
-		"babylonjs",
+		"react",
 		"typescript",
 		"vite",
 		"3d",
@@ -17,20 +17,56 @@
 		"dev": "vite dev",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+		"test:integration": "playwright test",
+		"test:unit": "vitest",
+		"clean:build": "rm -rf dist",
+		"clean:test": "rm -rf test-results coverage"
+	},
+	"dependencies": {
+		"@gsap/react": "^2.1.1",
+		"@react-three/drei": "^9.114.2",
+		"@react-three/fiber": "^8.17.9",
+		"@types/three": "^0.167.2",
+		"gsap": "^3.12.5",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"three": "^0.167.1",
+		"three-stdlib": "^2.33.0",
+		"valtio": "^2.0.0"
 	},
 	"devDependencies": {
-		"@babylonjs/core": "^6.44.0",
-		"@babylonjs/inspector": "^6.44.0",
-		"@typescript-eslint/eslint-plugin": "^7.0.0",
-		"@typescript-eslint/parser": "^6.21.0",
-		"eslint": "^8.57.0",
+		"@eslint/js": "^9.12.0",
+		"@playwright/test": "^1.47.2",
+		"@react-three/test-renderer": "^8.2.1",
+		"@types/node": "^22.7.4",
+		"@types/react": "^18.3.11",
+		"@types/react-dom": "^18.3.0",
+		"@vitejs/plugin-react": "^4.3.2",
+		"@vitejs/plugin-react-swc": "^3.7.1",
+		"@vitest/ui": "^2.1.2",
+		"eslint": "^9.12.0",
 		"eslint-config-prettier": "^9.1.0",
-		"gsap": "^3.12.5",
-		"prettier": "^3.2.5",
-		"sass": "1.71.1",
-		"typescript": "^5.3.3",
-		"vite": "^5.1.4"
-	}
+		"eslint-plugin-prettier": "^5.2.1",
+		"eslint-plugin-react-hooks": "5.1.0-rc-fb9a90fa48-20240614",
+		"eslint-plugin-react-refresh": "^0.4.12",
+		"globals": "^15.10.0",
+		"jsdom": "^25.0.1",
+		"lightningcss": "^1.27.0",
+		"prettier": "3.3.3",
+		"sass": "^1.79.4",
+		"typescript": "^5.6.2",
+		"typescript-eslint": "^8.8.0",
+		"vite": "^5.4.8",
+		"vitest": "^2.1.2"
+	},
+	"lint-staged": {
+		"*.{ts,tsx}": "eslint --cache --fix",
+		"*.{js,css,md,adoc}": "prettier --write"
+	},
+	"browserslist": [
+		"defaults and fully supports es6-module",
+		"maintained node versions"
+	]
 }
