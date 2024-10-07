@@ -1,8 +1,27 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,linux,windows,macos,test,jetbrains+all,dotenv
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,visualstudiocode,linux,windows,macos,test,jetbrains+all,dotenv
+# Created by https://www.toptal.com/developers/gitignore/api/node,test,linux,macos,dotenv,windows,jetbrains+all,visualstudiocode,blender,git,vercel
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,test,linux,macos,dotenv,windows,jetbrains+all,visualstudiocode,blender,git,vercel
+
+### Blender ###
+# Ignore temporary Blender files.
+*.blend[0-9]*
 
 ### dotenv ###
 .env
+
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+*.orig
+
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
 
 ### JetBrains+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -359,6 +378,9 @@ dist
 *tmpfiles
 *lol
 
+### Vercel ###
+.vercel
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -404,4 +426,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,linux,windows,macos,test,jetbrains+all,dotenv
+# End of https://www.toptal.com/developers/gitignore/api/node,test,linux,macos,dotenv,windows,jetbrains+all,visualstudiocode,blender,git,vercel
+
+# playwright 
+
+playwright-*/
+test-results/
